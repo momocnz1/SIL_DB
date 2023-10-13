@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planner</title>    
+    <!--front-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Bai Jamjuree" />
+    <!--icon-->
+    <script src="https://code.iconify.design/iconify-icon/1.0.4/iconify-icon.min.js"></script>
+    <link href='https://css.gg/toggle-off.css' rel='stylesheet'>
+    <!--css-->
+    <link rel="stylesheet" href="calender.css">
+</head>
+<body>
+    <ul class="navtop">
+        <li id="title">Planner</li>
+        <li><a class="navb" href="log">Hello dokidoki</a></li>
+        <li><a class="navb" id="noti"  href="noti"><iconify-icon icon="bi:bell" style="color: #f9f9f9;" width="20" height="20" ></iconify-icon></a></li>
+        <li id="shp"><a class="navb" href="shop"><iconify-icon icon="ic:round-shopping-cart" style="color: #c8cce0;" width="20" height="20" id="shop"></iconify-icon>shop</a></li>
+        <li id="fav"><a class="navb" href="fav"><iconify-icon icon="el:heart-alt" style="color: #bbbed7;" width="20" height="20"  id="heart"></iconify-icon>fav</a></li>
+    </ul>
+    <section class="row">
+        <a href="ho" style="color: #5F689F;">home</a>
+        <a href="bu" style="color: #5F689F;">bullet journal</a>
+        <a href="cal.html" style="color: #5F689F;">calender</a>
+        <a href="vi" style="color: #5F689F;">video</a>
+        <a href="sh" style="color: #5F689F;">shops</a>
+        <a href="to" style="color: #5F689F;">to do list</a>
+    </section>
+    <aside>
+        <div>
+            <table class="days" style="font-size: 10px;">
+                <tr>
+                    <th><a href="1.html" style="text-decoration: none;color:#E0E2F1;
+                        ;">01</a> </th>
+                    <th><a href="2.html" style="text-decoration: none;color: #E0E2F1;">02</a></th>
+                    <th><a href="3.html" style="text-decoration: none;color: #E0E2F1;">03</a></th>
+                    <th><a href="4.html" style="text-decoration: none;color: #E0E2F1;">04</a></th>
+                    <th><a href="5.html" style="text-decoration: none;color: #E0E2F1;">05</a></th>
+                    <th><a href="6.html" style="text-decoration: none;color: #E0E2F1;">06</a></th>
+                    <th><a href="7.html" style="text-decoration: none;color: #E0E2F1;">07</a></th>
+                    <th><a href="8.html" style="text-decoration: none;color: #E0E2F1;">08</a></th>
+                    <th><a href="9.html" style="text-decoration: none;color: #E0E2F1;">09</a></th>
+                    <th><a href="10.html" style="text-decoration: none;color: #E0E2F1;">10</a></th></th>
+                    <th><a href="11.html" style="text-decoration: none;color: #E0E2F1;">11</a></th>
+                    <th><a href="12.html" style="text-decoration: none;color: #E0E2F1;">12</a></th>
+                    <th><a href="13.html" style="text-decoration: none;color: #E0E2F1;">13</a></th>
+                    <th><a href="14.html" style="text-decoration: none;color: #E0E2F1;">14</a></th>
+                    <th><a href="15.html" style="text-decoration: none;color: #E0E2F1;">15</a></th>
+                    <th><a href="16.html" style="text-decoration: none;color: #E0E2F1;">16</a></th>
+                    <th><a href="17.html" style="text-decoration: none;color: #E0E2F1;">17</a></th>
+                    <th><a href="18.html" style="text-decoration: none;color: #E0E2F1;">18</a></th>
+                    <th><a href="19.html" style="text-decoration: none;color: #E0E2F1;">19</a></th>
+                    <th><a href="20.html" style="text-decoration: none;color: #E0E2F1;">20</a></th>
+                    <th><a href="21.html" style="text-decoration: none;color: #E0E2F1;">21</a></th>
+                    <th><a href="22.html" style="text-decoration: none;color: #E0E2F1;">22</a></th>
+                    <th><a href="23.html" style="text-decoration: none;color: #E0E2F1;">23</a></th>
+                    <th><a href="24.html" style="text-decoration: none;color: #E0E2F1;">24</a></th>
+                    <th><a href="25.html" style="text-decoration: none;color: #E0E2F1;">25</a></th>
+                    <th><a href="26.html" style="text-decoration: none;color: #E0E2F1;">26</a></th>
+                    <th><a href="27.html" style="text-decoration: none;color: #E0E2F1;">27</a></th>
+                    <th><a href="28.html" style="text-decoration: none;color: #E0E2F1;">28</a></th>
+                    <th><a href="29.html" style="text-decoration: none;color: #E0E2F1;">29</a></th>
+                    <th><a href="30.html" style="text-decoration: none;color: #E0E2F1;">30</a></th>
+                    <th><a href="31.html" style="text-decoration: none;color: #E0E2F1;">31</a></th>
+                    <th style="color: #545B6E;">__</th>
+                </tr>
+            </table>
+        </div>
+                <div class="tools" id="tools1" >
+                    <a href="#" style="color: #E0E2F1;text-decoration: none;font-size: 10px;">OVERVIEW</a>
+                </div>
+                <div id="tools2" class="tools">
+                    <a href="#" style="color: #E0E2F1;font-size: 10px; text-decoration: none;">COURSE</a>
+                </div>
+                <div id="tools3" class="tools">
+                    <a href="#" style="color: #E0E2F1;font-size: 10px; text-decoration: none;">MONTHLY</a>
+                </div>
+                <div id="tools4" class="tools">
+                    <a href="#" style="color: #E0E2F1;font-size: 10px; text-decoration: none;">ASSIGNMENT</a>
+                </div>
+                <div id="tools5" class="tools">
+                    <a href="#" style="color: #E0E2F1;font-size: 10px; text-decoration: none;">DAILY</a>
+                </div>
+                <div id="tools6" class="tools">
+                    <a href="#" style="color: #545b6e;font-size: 10px; text-decoration: none;">NOTE</a>
+                </div>
+            <div class="calen" id="calen">
+    
+                <div id="year" class="calen">
+                    <a href="2023.html" style="color: #ffffff; text-decoration: none;">2023</a>
+                </div>
+                <div id="mont">
+                    <a style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">February</a>
+                </div>
+                <div id="day" class="day">
+                    <a style="color: #ffffff;
+                    text-decoration: none;">SUN</a>
+                    <a style="color: #ffffff;
+                    text-decoration: none;">MON</a>
+                    <a style="color: #ffffff;
+                    text-decoration: none;">TUE</a>
+                    <a style="color: #ffffff;
+                    text-decoration: none;">WED</a>
+                    <a style="color: #ffffff;
+                    text-decoration: none;">THU</a>
+                    <a style="color: #ffffff;
+                    text-decoration: none;">FRI</a>
+                    <a style="color: #ffffff;
+                    text-decoration: none;">SAT</a>
+                </div>
+                <div class="dass" style="background-color: #E9E7E6;">
+                    <a href="29.html">
+                    <button id="day1" style="color:#C7CADD; text-align: center;" >29</button></a>
+                </div>
+                <div class="dass" style="background-color: #E9E7E6;">
+                    <a href="30.html">
+                    <button id="day2" style="color:#C7CADD; text-align:center;">30</button></a>
+                </div>
+                <div class="dass" style="background-color: #E9E7E6;">
+                    <a href="31.html">
+                    <button id="day3" style="color:#C7CADD; text-align: center;">31</button></a>
+                </div>
+                <div class="dass">
+                    <a href="1.html">
+                    <button id="day4" style="color: #FFFFFF; text-align: center;">1</button></a>
+                </div>
+                <div class="dass">
+                    <a href="2.html">
+                    <button id="day5" style="color: #FFFFFF; text-align: center;">2</button></a>
+                </div>
+                <div class="dass">
+                    <a href="3.html">
+                    <button id="day6" style="color: #FFFFFF;text-align: center;">3</button></a>
+                </div>
+                <div class="dass">
+                    <a href="4.html">
+                    <button id="day7" style="color: #FFFFFF;text-align: center;">4</button></a>
+                </div>
+                <div class="dass">
+                    <a href="5.html">
+                    <button id="day8" style="color: #FFFFFF;text-align: center;">5</button></a>
+                </div>
+                <div class="dass">
+                    <a href="6.html">
+                    <button id="day9" style="color: #FFFFFF;text-align: center;" >6</button></a>
+                </div>
+                <div class="dass">
+                    <a href="7.html">
+                    <button id="day10" style="color: #FFFFFF;text-align: center;" >7</button></a>
+                </div>
+                <div class="dass">
+                    <a href="8.html">
+                    <button id="day11" style="color: #FFFFFF;text-align: center;" >8</button></a>
+                </div>
+                <div class="dass">
+                    <a href="9.html">
+                    <button id="day12" style="color: #FFFFFF;text-align: center;">9</button></a>
+                </div>
+                <div class="dass">
+                    <a href="10.html">
+                    <button id="day13" style="color: #FFFFFF;text-align: center;">10</button></a>
+                </div>
+                <div class="dass">
+                    <a href="11.html">
+                    <button id="day14" style="color: #FFFFFF;text-align: center;">11</button></a>
+                </div>
+                <div class="dass">
+                    <a href="12.html">
+                    <button id="day15" style="color: #FFFFFF;text-align: center;">12</button></a>
+                </div>
+                <div class="dass">
+                    <a href="13.html">
+                    <button id="day16" style="color: #FFFFFF;text-align: center;">13</button></a>
+                </div>
+                <div class="dass">
+                    <a href="14.html">
+                    <button id="day17" style="color: #FFFFFF;text-align: center;">14</button></a>
+                </div>
+                <div class="dass">
+                    <a href="15.html">
+                    <button id="day18" style="color: #FFFFFF;text-align: center;">15</button></a>
+                </div>
+                <div class="dass">
+                    <a href="16.html">
+                    <button id="day19" style="color: #FFFFFF;text-align: center;">16</button></a>
+                </div>
+                <div class="dass">
+                    <a href="17.html">
+                    <button id="day20" style="color: #FFFFFF;text-align: center;">17</button></a>
+                </div>
+                <div class="dass">
+                    <a href="18.html">
+                    <button id="day21" style="color: #FFFFFF;text-align: center;">18</button></a>
+                </div>
+                <div class="dass">
+                    <a href="19.html">
+                    <button id="day22" style="color: #FFFFFF;text-align: center;">19</button></a>
+                </div>
+                <div class="dass">
+                    <a href="20.html">
+                    <button id="day23" style="color: #FFFFFF;text-align: center;">20</button></a>
+                </div>
+                <div class="dass">
+                    <a href="21.html">
+                    <button id="day24" style="color: #FFFFFF;text-align: center;">21</button></a>
+                </div>
+                <div class="dass">
+                    <a href="22.html">
+                    <button id="day25" style="color: #FFFFFF;text-align: center;">22</button></a>
+                </div>
+                <div class="dass">
+                    <a href="23.html">
+                    <button id="day26" style="color: #FFFFFF;text-align: center;">23</button></a>
+                </div>
+                <div class="dass">
+                    <a href="24.html">
+                    <button id="day27" style="color: #FFFFFF;text-align: center;">24</button></a>
+                </div>
+                <div class="dass">
+                    <a href="25.html">
+                    <button id="day28" style="color: #FFFFFF;text-align: center;">25</button></a>
+                </div>
+                <div class="dass">
+                    <a href="26.html">
+                    <button id="day29" style="color: #FFFFFF;text-align: center;">26</button></a>
+                </div>
+                <div class="dass">
+                    <a href="27.html">
+                    <button id="day30" style="color: #FFFFFF;text-align: center;">27</button></a>
+                </div>
+                <div class="dass">
+                    <a href="28.html">
+                    <button id="day31" style="color: #FFFFFF;text-align: center;">28</button></a>
+                </div>
+                <div class="dass" style="background-color: #E9E7E6;">
+                    <a href="1.html">
+                    <button id="day32" style="color:#C7CADD; text-align:center;">1</button></a>
+                </div>
+                <div class="dass" style="background-color: #E9E7E6;">
+                    <a href="2.html">
+                    <button id="day33" style="color:#C7CADD; text-align:center;">2</button></a>
+                </div>
+                <div class="dass" style="background-color: #E9E7E6;">
+                    <a href="3.html">
+                    <button id="day34" style="color:#C7CADD; text-align:center;">3</button></a>
+                </div>
+                <div class="dass" style="background-color: #E9E7E6;">
+                    <a href="4.html">
+                    <button id="day35" style="color:#C7CADD; text-align:center;">4</button></a>
+                </div>
+                <div id="mont">
+                    <a style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">March</a>
+                </div>
+                <div id="day" class="day">
+                    <a style="color: #ffffff;
+                    text-decoration: none;">SUN</a>
+                    <a style="color: #ffffff;
+                    text-decoration: none;">MON</a>
+                    <a style="color: #ffffff;
+                    text-decoration: none;">TUE</a>
+                    <a style="color: #ffffff;
+                    text-decoration: none;">WED</a>
+                    <a style="color: #ffffff;
+                    text-decoration: none;">THU</a>
+                    <a style="color: #ffffff;
+                    text-decoration: none;">FRI</a>
+                    <a style="color: #ffffff;
+                    text-decoration: none;">SAT</a>
+                </div>
+                <div class="dass" style="background-color: #E9E7E6;">
+                    <a href="26.html">
+                    <button id="day1" style="color:#C7CADD; text-align: center;" >26</button></a>
+                </div>
+                <div class="dass" style="background-color: #E9E7E6;">
+                    <a href="27.html">
+                    <button id="day2" style="color:#C7CADD; text-align:center;">27</button></a>
+                </div>
+                <div class="dass" style="background-color: #E9E7E6;">
+                    <a href="28.html">
+                    <button id="day3" style="color:#C7CADD; text-align: center;">28</button></a>
+                </div>
+                <div class="dass">
+                    <a href="1.html">
+                    <button id="day4" style="color: #FFFFFF; text-align: center;">1</button></a>
+                </div>
+                <div class="dass">
+                    <a href="2.html">
+                    <button id="day5" style="color: #FFFFFF; text-align: center;">2</button></a>
+                </div>
+                <div class="dass">
+                    <a href="3.html">
+                    <button id="day6" style="color: #FFFFFF;text-align: center;">3</button></a>
+                </div>
+                <div class="dass">
+                    <a href="4.html">
+                    <button id="day7" style="color: #FFFFFF;text-align: center;">4</button></a>
+                </div>
+                <div class="dass">
+                    <a href="5.html">
+                    <button id="day8" style="color: #FFFFFF;text-align: center;">5</button></a>
+                </div>
+                <div class="dass">
+                    <a href="6.html">
+                    <button id="day9" style="color: #FFFFFF;text-align: center;" >6</button></a>
+                </div>
+                <div class="dass">
+                    <a href="7.html">
+                    <button id="day10" style="color: #FFFFFF;text-align: center;" >7</button></a>
+                </div>
+                <div class="dass">
+                    <a href="8.html">
+                    <button id="day11" style="color: #FFFFFF;text-align: center;" >8</button></a>
+                </div>
+                <div class="dass">
+                    <a href="9.html">
+                    <button id="day12" style="color: #FFFFFF;text-align: center;">9</button></a>
+                </div>
+                <div class="dass">
+                    <a href="10.html">
+                    <button id="day13" style="color: #FFFFFF;text-align: center;">10</button></a>
+                </div>
+                <div class="dass">
+                    <a href="11.html">
+                    <button id="day14" style="color: #FFFFFF;text-align: center;">11</button></a>
+                </div>
+                <div class="dass">
+                    <a href="12.html">
+                    <button id="day15" style="color: #FFFFFF;text-align: center;">12</button></a>
+                </div>
+                <div class="dass">
+                    <a href="13.html">
+                    <button id="day16" style="color: #FFFFFF;text-align: center;">13</button></a>
+                </div>
+                <div class="dass">
+                    <a href="14.html">
+                    <button id="day17" style="color: #FFFFFF;text-align: center;">14</button></a>
+                </div>
+                <div class="dass">
+                    <a href="15.html">
+                    <button id="day18" style="color: #FFFFFF;text-align: center;">15</button></a>
+                </div>
+                <div class="dass">
+                    <a href="16.html">
+                    <button id="day19" style="color: #FFFFFF;text-align: center;">16</button></a>
+                </div>
+                <div class="dass">
+                    <a href="17.html">
+                    <button id="day20" style="color: #FFFFFF;text-align: center;">17</button></a>
+                </div>
+                <div class="dass">
+                    <a href="18.html">
+                    <button id="day21" style="color: #FFFFFF;text-align: center;">18</button></a>
+                </div>
+                <div class="dass">
+                    <a href="19.html">
+                    <button id="day22" style="color: #FFFFFF;text-align: center;">19</button></a>
+                </div>
+                <div class="dass">
+                    <a href="20.html">
+                    <button id="day23" style="color: #FFFFFF;text-align: center;">20</button></a>
+                </div>
+                <div class="dass">
+                    <a href="21.html">
+                    <button id="day24" style="color: #FFFFFF;text-align: center;">21</button></a>
+                </div>
+                <div class="dass">
+                    <a href="22.html">
+                    <button id="day25" style="color: #FFFFFF;text-align: center;">22</button></a>
+                </div>
+                <div class="dass">
+                    <a href="23.html">
+                    <button id="day26" style="color: #FFFFFF;text-align: center;">23</button></a>
+                </div>
+                <div class="dass">
+                    <a href="24.html">
+                    <button id="day27" style="color: #FFFFFF;text-align: center;">24</button></a>
+                </div>
+                <div class="dass">
+                    <a href="25.html">
+                    <button id="day28" style="color: #FFFFFF;text-align: center;">25</button></a>
+                </div>
+                <div class="dass">
+                    <a href="26.html">
+                    <button id="day29" style="color: #FFFFFF;text-align: center;">26</button></a>
+                </div>
+                <div class="dass">
+                    <a href="27.html">
+                    <button id="day30" style="color: #FFFFFF;text-align: center;">27</button></a>
+                </div>
+                <div class="dass">
+                    <a href="28.html">
+                    <button id="day31" style="color: #FFFFFF;text-align: center;">28</button></a>
+                </div>
+                <div class="dass">
+                    <a href="29.html">
+                    <button id="day32" style="color: #FFFFFF;text-align: center;">29</button></a>
+                </div>
+                <div class="dass">
+                    <a href="30.html">
+                    <button id="day33" style="color: #FFFFFF;text-align: center;">30</button></a>
+                </div>
+                <div class="dass">
+                    <a href="31.html">
+                    <button id="day34" style="color: #FFFFFF;text-align: center;">31</button></a>
+                </div>
+                <div class="dass" style="background-color: #E9E7E6;">
+                    <a href="1.html">
+                    <button id="day35" style="color:#C7CADD; text-align:center;">1</button></a>
+                </div>
+            </div>    
+        </aside>
+    </section>
+    <script src="calen.js"></script>
+    </aside>
+    
+</body>
+</html>
