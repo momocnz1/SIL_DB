@@ -55,23 +55,58 @@ body{
     padding-right: 5px;
     float: left;
 }
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; 
+    }
+
+    #title {
+        font-size: 24px; 
+    }
+
+    .navb {
+        padding: 8px 10px; 
+        font-size: 14px; 
+    }
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
 .row{
     margin: 20px;
-    font-family:'Paytone One';font-style: normal;
-    text-align: center;
+    font-family:'Paytone One';
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
-.days{
+#days{
     width: 900px;
     height: 30px;
-    left: 69px;
-    top: 221px;
     margin: auto;
     position: static;
     border: 1px solid #ABA0A0;
     border-collapse: collapse;
-    background-color: #545B6E;font-family:'Paytone One';
+    background-color: #545B6E;
+    font-family:'Paytone One';
     color: #ffffff;
-    line-height: 8px;font-weight: 300;
+    line-height: 8px;
+    font-weight: 300;
+}
+.days{
+    width: 900px;
+    height: 30px;
+    margin: auto;
+    justify-content: space-between; 
+    position: static;
+    border: 1px solid #ABA0A0;
+    border-collapse: collapse;
+    background-color: #545B6E;
+    font-family:'Paytone One';
+    color: #ffffff;
+    line-height: 8px;
+    font-weight: 300;
 }
 table, th {
     border: 1px solid #ABA0A0;
@@ -82,14 +117,23 @@ th {
 }
 .calen{
     width: 900px;
-    height: 1380px;
+    height: auto;
     border: 1px solid #9b9393;
     background-color: #FCF0CD;
-    box-sizing: border-box;
-    position: absolute;
-    margin: auto; 
-    top: 145px;
-    right: 310px;
+    position: static;
+    margin:auto ; 
+    align-items: center; 
+    justify-content: center;
+    z-index: 1;
+}
+@media (max-width: 768px) {
+    .days {
+        font-size: 10px;
+    }
+
+    .calen {
+        font-size: 14px;
+    }
 }
 #year{
     width: 90px;
@@ -117,7 +161,6 @@ th {
 .tools{
     width: 95px;
     height: 51px;
-    right: 258px;
     margin-top: 20px;
     padding-left: 2px;
     padding-right: 5px;
@@ -129,63 +172,95 @@ th {
     border-radius: 18px;
     font-family:'Paytone One';font-style: normal;
     text-align: center;
-    position: absolute;
     transform: rotate(90.51deg);
     cursor: pointer;
-    float: right;
+    right: 15%;
+    position: absolute;
+    z-index: 0;
 }
 #tools1{
     top: 147px;
-    right: 258px;
+    
     z-index: -1;
     cursor: pointer;
 }  
 #tools2{
     z-index: -2;
     top: 237px;
-    right: 258px;
+    
     cursor: pointer;
 }
 #tools3{
     z-index: -3;
     top: 327px;
-    right: 258px;
+    
     cursor: pointer;
 }
 #tools4{
     z-index: -4;
     top: 417px;
-    right: 258px;
+   
     cursor: pointer;
 }
 #tools5{
     z-index: -5;
     top: 507px;
-    right: 258px;
+    
     cursor: pointer;
 }
 #tools6{
-    margin-top: 1;
-    margin-right: 258px;
     width: 95px;
     height: 51px;
+    margin-top: 20px;
     padding-left: 2px;
     padding-right: 5px;
     padding-top: 2px;
     padding-bottom: 5px;
+    font-family:'Paytone One';
+    font-style: normal;
+    text-align: center;
+    cursor: pointer;
+    right: 15%;
+    position: absolute;
     z-index: -6;
     background: #E0E2F1;
     border: 1px solid #969393;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 18px;
-    float: right;
-    position: absolute;
-    font-family:'Paytone One';font-style: normal;
-    text-align: center;
     top: 597px;
-    right: 0px;
     transform: rotate(90.51deg);
-    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .tools {
+        width: 65px;
+        height: 35px;
+    }
+
+    #tools1 {
+        top: 147px;
+    }
+
+    #tools2 {
+        top: 217px;
+    }
+
+    #tools3 {
+        top: 287px;
+    }
+
+    #tools4 {
+        top: 357px;
+    }
+
+    #tools5 {
+        top: 427px;
+    }
+
+    #tools6 {
+        width: 65px;
+        height: 35px;
+        top: 497px;
+    }
 }
 #mont{
     margin-top: 50px;
