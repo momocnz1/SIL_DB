@@ -71,7 +71,8 @@ body{
 }
 .row{
     margin: 20px;
-    font-family:'Paytone One';font-style: normal;
+    font-family:'Paytone One';
+    font-style: normal;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -192,19 +193,26 @@ body{
     position: relative;
     display: flex;
 }
-#block1{
-    margin-left: 25%;
-    margin-top: 3%;
-    color: #000;
-    font-family: Paytone One;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
+
+    
 .img{
-    margin-left: 5%;
-    margin-top: 3%;
+    margin-left: 10%;
+    margin-top: 1.5%;
+    margin-bottom: 1%;
     float: left;
 
+}
+.img1{
+    margin-left: 10%;
+    margin-top: 5%;
+    float: left;
+
+}
+.text{
+    margin-top: 5%;
+    margin-left: 18%;
+    font-family:'Paytone One';
+    font-style: normal;
+    display: flex;
+    gap: 33%;
 }
