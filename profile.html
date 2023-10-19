@@ -13,19 +13,21 @@
     <!--css-->
     <link rel="stylesheet" href="profile.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="profile.js"></script>
+    <link src="log.html">
 </head>
 
 <body>
     <ul class="navtop">
         <li id="title">Planner</li>
-        <li><a class="navb" href="user.html">Hello dokidoki</a></li>
+        <li><a class="navb" href="log.html">Log in!</a></li>
         <li><a class="navb" id="noti"  href="noti"><iconify-icon icon="bi:bell" style="color: #f9f9f9;" width="20" height="20" ></iconify-icon></a></li>
         <li id="shp"><a class="navb" href="shop"><iconify-icon icon="ic:round-shopping-cart" style="color: #c8cce0;" width="20" height="20" id="shop"></iconify-icon>shop</a></li>
         <li id="fav"><a class="navb" href="fav"><iconify-icon icon="el:heart-alt" style="color: #bbbed7;" width="20" height="20"  id="heart"></iconify-icon>fav</a></li>
     </ul>
 
     <section class="row">
-        <a href="profile.html" style="color: #5F689F;">home</a>
+        <a href="#" style="color: #5F689F;">home</a>
         <a href="bullet.html" style="color: #5F689F;">bullet journal</a>
         <a href="cal.html" style="color: #5F689F;">calender</a>
         <a href="vi" style="color: #5F689F;">video</a>
@@ -33,197 +35,126 @@
         <a href="to" style="color: #5F689F;">to do list</a>
     </section>
 
-    <h1 style="text-align: center;
-    position: auto; font-family:'Paytone One';font-style: normal; color: #5F689F; cursor: default;">All Notes</h1>
+    <section class="image-gallery">
+        <div class="image_item_1">
+            <img class="image_1" src="main_1.jpg" alt="image_1">
+        </div>
+        <div class="image_item_2">
+            <img class="image_2" src="main_2.jpg" alt="image_2">
+        </div>
+        <div class="image_item_3">
+            <img class="image_3" src="main_3.jpg" alt="image_3">
+        </div>
+    </section>
     
-    <section class="image-gallery">
-        <div class="image-container">
-            <img class="imagedrop" src="main_1.jpg" alt="image_1">
-            <div class="dropdown">
-                <button class="dropbtn"><b>...</b></button>
-                <div class="dropdown-content">
-                    <a href="edit.html">Edit</a>
-                    <a href="add.html">Add</a>
-                </div>
-            </div>
-            <button id="delete-button" style="font-family:'Paytone One';font-style: normal;">Delete</button>
-                    <div id="confirmation-popup" class="popup">
-                        <div class="popup-content">
-                            <p style="font-family:'Paytone One';font-style: normal; color: #5F689F;">Are you sure you want to delete this?</p>
-                            <button id="confirm-button" style="font-family:'Paytone One';font-style: normal;">Confirm</button>
-                            <button id="cancel-button" style="font-family:'Paytone One';font-style: normal;">Cancel</button>
-                        </div>
-                    </div>
+    <section class="Topic">
+        <p>
+            Promotions
+        </p>
+        <div class="custom-box">
+            <p> </p>
         </div>
-        <div class="image-container">
-            <img class="imagedrop" src="main_2.jpg" alt="image_1">
-            <div class="dropdown">
-                <button class="dropbtn"><b>...</b></button>
-                <div class="dropdown-content">
-                    <a href="edit.html">Edit</a>
-                    <a href="add.html">Add</a>
-                </div>
-            </div>
-            <button id="delete-button" style="font-family:'Paytone One';font-style: normal;">Delete</button>
-            <div id="confirmation-popup" class="popup">
-                <div class="popup-content">
-                    <p style="font-family:'Paytone One';font-style: normal; color: #5F689F;">Are you sure you want to delete this?</p>
-                    <button id="confirm-button" style="font-family:'Paytone One';font-style: normal;">Confirm</button>
-                    <button id="cancel-button" style="font-family:'Paytone One';font-style: normal;">Cancel</button>
-                </div>
-            </div>
-        </div>
-        <div class="image-container">
-            <img class="imagedrop" src="main_3.jpg" alt="image_1">
-            <div class="dropdown">
-                <button class="dropbtn"><b>...</b></button>
-                <div class="dropdown-content">
-                    <a href="edit.html">Edit</a>
-                    <a href="add.html">Add</a>
-                </div>
-            </div>
-            <button id="delete-button" style="font-family:'Paytone One';font-style: normal;">Delete</button>
-            <div id="confirmation-popup" class="popup">
-                <div class="popup-content">
-                    <p style="font-family:'Paytone One';font-style: normal; color: #5F689F;">Are you sure you want to delete this?</p>
-                    <button id="confirm-button" style="font-family:'Paytone One';font-style: normal;">Confirm</button>
-                    <button id="cancel-button" style="font-family:'Paytone One';font-style: normal;">Cancel</button>
-                </div>
-            </div>
+        <div class="All">
+            <p>
+                All
+            </p>
         </div>
     </section>
-    <br> <br><br>
-    <section class="image-gallery">
-        <div class="image-container">
-            <img class="imagedrop" src="Post_1.jpg" alt="image_1">
-            <div class="dropdown">
-                <button class="dropbtn"><b>...</b></button>
-                <div class="dropdown-content">
-                    <a href="edit.html">Edit</a>
-                    <a href="add.html">Add</a>
-                </div>
-            </div>
-            <button id="delete-button" style="font-family:'Paytone One';font-style: normal;">Delete</button>
-            <div id="confirmation-popup" class="popup">
-                <div class="popup-content">
-                    <p style="font-family:'Paytone One';font-style: normal; color: #5F689F;">Are you sure you want to delete this?</p>
-                    <button id="confirm-button" style="font-family:'Paytone One';font-style: normal;">Confirm</button>
-                    <button id="cancel-button" style="font-family:'Paytone One';font-style: normal;">Cancel</button>
-                </div>
-            </div>
+
+    <section class="box">
+        <div class="box_gallery">
+            <img class="image_box" src="box_1.jpg" width="50%" height="50%" >
         </div>
-        <div class="image-container">
-            <img class="imagedrop" src="Post_2.jpg" alt="image_1">
-            <div class="dropdown">
-                <button class="dropbtn"><b>...</b></button>
-                <div class="dropdown-content">
-                    <a href="edit.html">Edit</a>
-                    <a href="add.html">Add</a>
-                </div>
-            </div>
-            <button id="delete-button" style="font-family:'Paytone One';font-style: normal;">Delete</button>
-            <div id="confirmation-popup" class="popup">
-                <div class="popup-content">
-                    <p style="font-family:'Paytone One';font-style: normal; color: #5F689F;">Are you sure you want to delete this?</p>
-                    <button id="confirm-button" style="font-family:'Paytone One';font-style: normal;">Confirm</button>
-                    <button id="cancel-button" style="font-family:'Paytone One';font-style: normal;">Cancel</button>
-                </div>
-            </div>
+        <div class="box_gallery">
+            <img class="image_box" src="box_2.jpg" width="50%" height="50%" >
         </div>
-        <div class="image-container">
-            <img class="imagedrop" src="Post_3.jpg" alt="image_1">
-            <div class="dropdown">
-                <button class="dropbtn"><b>...</b></button>
-                <div class="dropdown-content">
-                    <a href="edit.html">Edit</a>
-                    <a href="add.html">Add</a>
-                </div>
-            </div>
-            <button id="delete-button" style="font-family:'Paytone One';font-style: normal;">Delete</button>
-            <div id="confirmation-popup" class="popup">
-                <div class="popup-content">
-                    <p style="font-family:'Paytone One';font-style: normal; color: #5F689F;">Are you sure you want to delete this?</p>
-                    <button id="confirm-button" style="font-family:'Paytone One';font-style: normal;">Confirm</button>
-                    <button id="cancel-button" style="font-family:'Paytone One';font-style: normal;">Cancel</button>
-                </div>
-            </div>
+        <div class="box_gallery">
+            <img class="image_box" src="box_3.jpg" width="50%" height="50%" >
+        </div>
+        <div class="box_gallery">
+            <img class="image_box" src="box_4.jpg" width="50%" height="50%" >
         </div>
     </section>
-    <br><br><br>
-    <section class="image-gallery">
-        <div class="image-container">
-            <img class="imagedrop" src="Story_1.jpg" alt="image_1">
-            <div class="dropdown">
-                <button class="dropbtn"><b>...</b></button>
-                <div class="dropdown-content">
-                    <a href="edit.html">Edit</a>
-                    <a href="add.html">Add</a>
-                </div>
-            </div>
-            <button id="delete-button" style="font-family:'Paytone One';font-style: normal;">Delete</button>
-            <div id="confirmation-popup" class="popup">
-                <div class="popup-content">
-                    <p style="font-family:'Paytone One';font-style: normal; color: #5F689F;">Are you sure you want to delete this?</p>
-                    <button id="confirm-button" style="font-family:'Paytone One';font-style: normal;">Confirm</button>
-                    <button id="cancel-button" style="font-family:'Paytone One';font-style: normal;">Cancel</button>
-                </div>
-            </div>
+
+    <section class="Topic">
+        <p>
+            Files
+        </p>
+        <div class="custom-box">
+            <p> </p>
         </div>
-        <div class="image-container">
-        <img class="imagedrop" src="Story_2.jpg" alt="image_1">
-            <div class="dropdown">
-                <button class="dropbtn"><b>...</b></button>
-                <div class="dropdown-content">
-                    <a href="edit.html">Edit</a>
-                    <a href="add.html">Add</a>
-                </div>
-            </div>
-            <button id="delete-button" style="font-family:'Paytone One';font-style: normal;">Delete</button>
-            <div id="confirmation-popup" class="popup">
-                <div class="popup-content">
-                    <p style="font-family:'Paytone One';font-style: normal; color: #5F689F;">Are you sure you want to delete this?</p>
-                    <button id="confirm-button" style="font-family:'Paytone One';font-style: normal;">Confirm</button>
-                    <button id="cancel-button" style="font-family:'Paytone One';font-style: normal;">Cancel</button>
-                </div>
-            </div>
-        </div>
-        <div class="image-container">
-        <img class="imagedrop" src="Story_3.jpg" alt="image_1">
-            <div class="dropdown">
-                <button class="dropbtn"><b>...</b></button>
-                <div class="dropdown-content">
-                    <a href="edit.html">Edit</a>
-                    <a href="add.html">Add</a>
-                </div>
-            </div>
-            <button id="delete-button" style="font-family:'Paytone One';font-style: normal;">Delete</button>
-            <div id="confirmation-popup" class="popup">
-                <div class="popup-content">
-                    <p style="font-family:'Paytone One';font-style: normal; color: #5F689F;">Are you sure you want to delete this?</p>
-                    <button id="confirm-button" style="font-family:'Paytone One';font-style: normal;">Confirm</button>
-                    <button id="cancel-button" style="font-family:'Paytone One';font-style: normal;">Cancel</button>
-                </div>
-            </div>
+        <div class="All">
+            <p>
+                All
+            </p>
         </div>
     </section>
-<br><br><br>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-    const deleteButton = document.getElementById("delete-button");
-    const confirmationPopup = document.getElementById("confirmation-popup");
-    const confirmButton = document.getElementById("confirm-button");
-    const cancelButton = document.getElementById("cancel-button");
 
-    deleteButton.addEventListener("click", function() {
-        confirmationPopup.style.display = "block";
-    });
+    <section class="box">
+    <div class="box_gallery">
+        <img class="image_box" src="box_5.jpg" width="50%" height="50%" >
+    </div>
+    <div class="box_gallery">
+        <img class="image_box" src="box_6.jpg" width="50%" height="50%" >
+    </div>
+    <div class="box_gallery">
+        <img class="image_box" src="box_7.jpg" width="50%" height="50%" >
+    </div>
+    <div class="box_gallery">
+        <img class="image_box" src="box_8.jpg" width="50%" height="50%" >
+    </div>
+    </section>
 
-    confirmButton.addEventListener("click", function() {
-        alert("Note Deleted.");
-        confirmationPopup.style.display = "none";
-    });
+    <section class="Topic">
+        <p>
+            Post
+        </p>
+        <div class="custom-box">
+            <p> </p>
+        </div>
+        <div class="All">
+            <p>
+                All
+            </p>
+        </div>
+    </section>
 
-    cancelButton.addEventListener("click", function() {
-        confirmationPopup.style.display = "none";
-    });
-});
+    <section class="Post">
+        <div class="Post_gallery">
+            <img class="image_post" src="Post_1.jpg" width="50%" height="50%" >
+        </div>
+        <div class="Post_gallery">
+            <img class="image_post" src="Post_2.jpg" width="50%" height="50%" >
+        </div>
+        <div class="Post_gallery">
+            <img class="image_post" src="Post_3.jpg" width="50%" height="50%" >
+        </div>
+    </section>
+
+    <section class="Topic">
+        <p>
+            Story
+        </p>
+        <div class="custom-box">
+            <p> </p>
+        </div>
+        <div class="All">
+            <p>
+                All
+            </p>
+        </div>
+    </section>
+
+    <section class="Post">
+        <div class="Post_gallery">
+            <img class="image_post" src="Story_1.jpg" width="50%" height="50%" >
+        </div>
+        <div class="Post_gallery">
+            <img class="image_post" src="Story_2.jpg" width="50%" height="50%" >
+        </div>
+        <div class="Post_gallery">
+            <img class="image_post" src="Story_3.jpg" width="50%" height="50%" >
+        </div>
+    </section>
+</body>
+</html>
