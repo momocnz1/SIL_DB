@@ -1,7 +1,7 @@
 function fetchDataFromAPI() {
     const apiUrl = "http://localhost:8000/users";
     fetch(apiUrl, {
-        method: 'POST',
+        method: 'GET',
         headers: {
           'Content-Type': 'application/json'
         },
@@ -26,7 +26,7 @@ function fetchDataFromAPI() {
         getemail = email;
         getupassword = upassword;
 
-        usernameValue.innerHTML = getusername; 
+        usernameInput.innerHTML = getusername; 
       })
       .catch(error => {
         console.error("เกิดข้อผิดพลาดในการร้องขอ API: " + error);

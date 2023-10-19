@@ -1,0 +1,214 @@
+<!--<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div id="app">
+        <v-app>
+            <v-main>
+                <v-container grid-list-xs>
+                    <h2>EXAMPLE CRUD</h2>
+                    <form @submit.prevent="(form.id)?update(form.id):create()">
+                        <v-text-field v-model="form.first_name" label="ชื่อ" id="id"></v-text-field>
+                        <v-text-field v-model="form.last_name" label="นามสกุล" id="id"></v-text-field>
+                        <v-text-field v-model="form.tel" label="Phone Number" id="id"></v-text-field>
+                        <v-text-field v-model="form.gender" label="Gender" id="id"></v-text-field>
+                        <v-text-field v-model="form.address" label="ที่อยู่" id="id"></v-text-field>
+                        <v-text-field v-model="form.email" label="email" id="id"></v-text-field>
+                        
+                        <v-btn type="submit" color="success">{{(form.id)?'Update':'Create'}}</v-btn>
+                    </form>
+                    <br>
+                    <v-text-field v-model="search" label="Search" id="id"></v-text-field>
+                    <v-data-table :headers="headers" :items="list" :search="search">
+                        <template v-slot:item.action="{ item }">
+                            <div>
+                                <v-btn @click="form = item" color="warning">edit</v-btn>
+                                <v-btn @click="remove(item.id)" color="error">delete</v-btn>
+                            </div>
+                        </template>
+                    </v-data-table>
+                </v-container>
+            </v-main>
+        </v-app>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+    <script>
+        const host = "http://localhost:8000"
+        const vue_home = new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+            data: () => {
+                return ({
+                    name: 'Vue',
+                    list: [],
+                    form: {},
+                    search: '',
+                    headers: [{
+                        text: 'ชื่อ',
+                        value: 'first_name',
+                
+                    },
+                    {
+                        text: 'นามสกุล',
+                        value: 'last_name',
+                    },
+                    {
+                        text: 'phone number',
+                        value: 'tel',
+                    },{
+                        text: 'Gender',
+                        value: 'gender',
+                    } ,{
+                        text: 'adds',
+                        value: 'address',
+                    } ,
+                    {
+                        text: 'Email',
+                        value: 'email',
+                    } , 
+                    {
+                        text: 'Status',
+                        value: 'status',
+                    } , {
+                        text: 'action',
+                        value: 'action',
+                    } ,  ]
+                })
+            },
+            async created() {
+                await this.load()
+            },
+            methods: {
+                async load() {
+                    this.form = {}
+                    await axios.get(`${host}/users`).then((res) => {
+                        this.list = res.data
+                    })
+                },
+                async remove(id) {
+                    let confirm = window.confirm('คุณต้องการลบข้อมูลใช่หรือไม่')
+                    if(confirm){
+                        await axios.delete(`${host}/usres/${id}`).then(async(res) => {
+                        await this.load()
+                        let  result = res.data
+                        alert(result.message)
+                    })
+                    }
+                    
+                },
+                async update(id) {
+                    let chack = window.confirm('คุณต้องการแก้ไขข้อมูลใช่หรือไม่')
+                    if(chack){
+                        await axios.put(`${host}/usres/${id}`, this.form).then(async(res) => {
+                        alert(res.data.message)
+                    }) 
+                    }
+                   await this.load()
+                },
+                async create() {
+                    await axios.post(`${host}/users`, this.form).then(async(res) => {
+                        await this.load()
+                    })
+                },
+            },
+
+
+        })
+    </script>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planner</title>
+    <link rel="stylesheet" href="user.css">
+    <link rel="shortcut icon" href="567.png">
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Bai Jamjuree" />
+    
+    <script src="https://code.iconify.design/iconify-icon/1.0.4/iconify-icon.min.js"></script>
+    <link href='https://css.gg/toggle-off.css' rel='stylesheet'>
+</head>
+<body>
+    <div id="app">
+            <ul class="navtop">
+                <li id="title">Planner</li>
+                <li><a class="navb" href="log.html">{{ user.username }}</a></li>
+                <li><a class="navb" id="noti"  href="noti"><iconify-icon icon="bi:bell" style="color: #f9f9f9;" width="20" height="20" ></iconify-icon></a></li>
+                <li id="shp"><a class="navb" href="shop"><iconify-icon icon="ic:round-shopping-cart" style="color: #c8cce0;" width="20" height="20" id="shop"></iconify-icon>shop</a></li>
+                <li id="fav"><a class="navb" href="fav"><iconify-icon icon="el:heart-alt" style="color: #bbbed7;" width="20" height="20"  id="heart"></iconify-icon>fav</a></li>
+            </ul>
+            <section class="row">
+                <a href="profile.html" style="color: #5F689F;">home</a>
+                <a href="bullet.html" style="color: #5F689F;">bullet journal</a>
+                <a href="cal.html" style="color: #5F689F;">calender</a>
+                <a href="vi" style="color: #5F689F;">video</a>
+                <a href="sh" style="color: #5F689F;">shops</a>
+                <a href="to" style="color: #5F689F;">to do list</a>
+            </section>
+            <a id="kor" style="color:#5F689F;">ข้อมูลส่วนตัว</a>
+            <a id="kar" style="color:#616892;">ข้อมูลพื้นฐาน เช่น ชื่อ </a>
+            <section class="box">
+                <br id="fname" style="color: black;">ชื่อ :  <span id="fnameValue">{{ user.fname }}</span></br>
+                <br id="lname" style="color: black;">นามสกุล :  <span id="lnameValue"></span> {{ user.lname }}</br>
+                <br id="UserID" style="color: black;">UserID : <span id="userIDValue">{{ user.users_id }}</span></br>
+                <br id="sex" style="color: black;">เพศ : <span id="sexValue">{{ user.sex }}</span></br>
+                <br id="email" style="color: black;">อีเมล์ : <span id="emailValue"></span>{{ user.email }}</br>
+            </section>
+            <section class="boxtwo">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+                <i class="fa-regular fa-pen-to-square" style="color: #616892;"></i>
+                <a id="edit" style="color: #616892;">แก้ไขข้อมูลส่วนตัว</a>
+            </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+            const host = "http://localhost:8000"
+
+            const vue_home = new Vue({
+                el: '#app',
+                vuetify: new Vuetify({
+                    theme:{ dark : true }
+                }),
+                data: () => {
+                    return ({
+                        user: null,
+                    })
+                },
+                async created() {
+                    await this.load()
+                },
+                methods: {
+                    async load() {
+                        this.form = {}
+                        await axios.get(`${host}/users/1`).then((res) => {
+                            this.user = res.data
+                        })
+                    },
+                }
+            })
+
+    </script>
+
+</body>
+</html>

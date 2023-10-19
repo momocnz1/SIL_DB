@@ -12,12 +12,12 @@
     
     <script src="https://code.iconify.design/iconify-icon/1.0.4/iconify-icon.min.js"></script>
     <link href='https://css.gg/toggle-off.css' rel='stylesheet'>
-
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <ul class="navtop">
         <li id="title">Planner</li>
-        <li><a class="navb" href="#">Log in!</a></li>
+        <li><a class="navb" href="log">Log in!</a></li>
         <li><a class="navb" id="noti"  href="noti"><iconify-icon icon="bi:bell" style="color: #f9f9f9;" width="20" height="20" ></iconify-icon></a></li>
         <li id="shp"><a class="navb" href="shop"><iconify-icon icon="ic:round-shopping-cart" style="color: #c8cce0;" width="20" height="20" id="shop"></iconify-icon>shop</a></li>
         <li id="fav"><a class="navb" href="fav"><iconify-icon icon="el:heart-alt" style="color: #bbbed7;" width="20" height="20"  id="heart"></iconify-icon>fav</a></li>
@@ -30,27 +30,38 @@
         <a href="sh" style="color: #5F689F;">shops</a>
         <a href="to" style="color: #5F689F;">to do list</a>
     </section>
+    <div class="past"> 
+        <h2>ข้อมูลส่วนตัว</h2>
+    </div>
+    <div class="boxfrom">
     <form id="userForm">
-        <label for="username">ชื่อผู้ใช้:</label>
-        <input type="text" id="username" name="username" required><br>
+        <label for="userID">ชื่อผู้ใช้: </label>
+        <input style="width: 410px;" type="text" id="userID" name="userID" required><br>
+        <p></p>
+        
+        <label for="fname">ชื่อ: </label>
+        <input style="width: 450px; " type="text" id="fname" name="fname" required><br>
+        <p></p>
+      
+        <label for="lname">นามสกุล: </label>
+        <input style="width: 415px;" type="text" id="lname" name="lname" required><br>
+        <p></p>
 
-        <label for="fname">ชื่อ:</label>
-        <input type="text" id="fname" name="fname" required><br>
+        <label for="sex">เพศ: </label>
+        <input style="width: 445px;" type="text" id="sex" name="sex"><br>
+        <p></p>
       
-        <label for="lname">นามสกุล:</label>
-        <input type="text" id="lname" name="lname" required><br>
+        <label for="email">อีเมล์: </label>
+        <input style="width: 438px;" type="text" id="email" name="email" required><br>
+        <p></p>
       
-        <label for="sex">เพศ:</label>
-        <input type="text" id="sex" name="sex"><br>
-      
-        <label for="email">อีเมล์:</label>
-        <input type="email" id="email" name="email" required><br>
+        <label for="password">password: </label>
+        <input style="width: 414px;" type="text" id="password" name="password" required><br>
 
-        <label for="email">รหัสผ่าน:</label>
-        <input type="text" id="upassword" name="upassword" required><br>
-      
-        <button type="submit">Submit</button>
+        <p></p>
+        <button id="dt" type="submit" href="user.html">Submit</button>
       </form>
+    </div>
       <script src="loog.js"></script>
 </body>
 </html>
