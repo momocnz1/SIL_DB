@@ -17,7 +17,7 @@
 <body>
     <ul class="navtop">
         <li id="title">Planner</li>
-        <li><a class="navb" href="log">Log in!</a></li>
+        <li><a class="navb" href="#">Log in!</a></li>
         <li><a class="navb" id="noti"  href="noti"><iconify-icon icon="bi:bell" style="color: #f9f9f9;" width="20" height="20" ></iconify-icon></a></li>
         <li id="shp"><a class="navb" href="shop"><iconify-icon icon="ic:round-shopping-cart" style="color: #c8cce0;" width="20" height="20" id="shop"></iconify-icon>shop</a></li>
         <li id="fav"><a class="navb" href="fav"><iconify-icon icon="el:heart-alt" style="color: #bbbed7;" width="20" height="20"  id="heart"></iconify-icon>fav</a></li>
@@ -31,6 +31,9 @@
         <a href="to" style="color: #5F689F;">to do list</a>
     </section>
     <form id="userForm">
+        <label for="username">ชื่อผู้ใช้:</label>
+        <input type="text" id="username" name="username" required><br>
+
         <label for="fname">ชื่อ:</label>
         <input type="text" id="fname" name="fname" required><br>
       
@@ -42,8 +45,11 @@
       
         <label for="email">อีเมล์:</label>
         <input type="email" id="email" name="email" required><br>
+
+        <label for="email">รหัสผ่าน:</label>
+        <input type="text" id="upassword" name="upassword" required><br>
       
-        <button type="submit" href="user.html">Submit</button>
+        <button type="submit">Submit</button>
       </form>
       <script src="loog.js"></script>
 </body>

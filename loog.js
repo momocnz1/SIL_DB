@@ -1,5 +1,37 @@
 const form = document.getElementById('userForm');
+ const apiUrl = "http://localhost:8000/users";
+    fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        const {
+            users_id,
+            fname,
+            lname,
+            sex,
+            email,
+            upassword,
+            username
+        } = data[0];
+        getusers_id = users_id;
+        getusername = username;
+        getfname = fname;
+        getlname = lname;
+        getsex = sex;
+        getemail = email;
+        getupassword = upassword;
 
+        userName.innerHTML = username; 
+        usernameInput.Value = getusername;
+      })
+      .catch(error => {
+        console.error("เกิดข้อผิดพลาดในการร้องขอ API: " + error);
+      });
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   
@@ -10,7 +42,6 @@ form.addEventListener('submit', async (e) => {
     formDataObject[key] = value;
   });
 
-  // ส่งข้อมูลไปยัง API ของคุณ โดยใช้ fetch หรือ Axios
   const apiUrl = "http://localhost:8000/users";
   
   try {
@@ -23,10 +54,11 @@ form.addEventListener('submit', async (e) => {
     });
 
     if (response.ok) {
-      // ดำเนินการหลังจากสำเร็จ เช่น ล้างฟอร์ม
+      const fname = formDataObject.fname;
       form.reset();
       alert('บันทึกข้อมูลสำเร็จแล้ว');
-      const originalPageURL = 'profile.html'; // เช่น 'index.html'
+
+      const originalPageURL = 'profile.html'; 
         window.location.href = originalPageURL;
     } else {
       alert('มีข้อผิดพลาดในการส่งข้อมูล');

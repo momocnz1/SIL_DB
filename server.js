@@ -13,7 +13,6 @@ const connection = {
 }
 app.use(cors())
 app.use(bodyParser.json());
-
 app.get('/users' , async (req, res) => {
   const conn =  await mysql.createConnection(connection);
   const [data] = await conn.query("SELECT * FROM users");
@@ -31,7 +30,7 @@ app.post('/users' , async(req, res) => {
         nextId = parseInt(maxId[0].max_id) + 1;
     }
       const [data] = await conn.query(
-          "INSERT INTO users (`users_id`,`fname`, `lname`, `sex`, `email`, `upassword`) VALUES (?,?, ?, ?, ?, ?)",
+          "INSERT INTO users (`users_id`,`fname`, `lname`, `sex`, `email`, `upassword`,`username`) VALUES (?,?, ?, ?, ?, ?,?)",
            [
             nextId, 
             req.body.fname,
@@ -55,7 +54,7 @@ app.post('/users' , async(req, res) => {
 app.put('/users/:id' , async(req, res) => { 
   try {
     const conn = await mysql.createConnection((connection));  
-      const [data] = await conn.query("UPDATE `users` SET `users_id`= ?,`fname`= ?,`lname`= ?,`sex`= ?,`email`= ?,`upassword`= ? WHERE ?",
+      const [data] = await conn.query("UPDATE `users` SET `users_id`= ?,`fname`= ?,`lname`= ?,`sex`= ?,`email`= ?,`upassword`= ?,`username`=? WHERE ?",
       [
         req.body.fname,
         req.body.lname,
